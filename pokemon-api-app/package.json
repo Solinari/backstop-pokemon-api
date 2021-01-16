@@ -36,7 +36,6 @@
     "eslint": "^7.17.0",
     "eslint-plugin-react": "^7.22.0",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "eslint-plugin-react-redux": "^3.3.2",
     "redux-devtools": "^3.7.0"
   }
 }

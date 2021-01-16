@@ -77,7 +77,6 @@ PokemonCard.defaultProps = {
   setNewPokemon: () => {},
 };
 
-// eslint-disable-next-line react-redux/mapDispatchToProps-returns-object
 const mapDispatchToProps = (dispatch) => {
   return bindActionCreators(
     {
@@ -93,5 +92,4 @@ const mapStateToProps = (state, ownProps) => {
   return { currentPokemon };
 };
 
-// eslint-disable-next-line react-redux/prefer-separate-component-file
 export default connect(mapStateToProps, mapDispatchToProps)(PokemonCard);

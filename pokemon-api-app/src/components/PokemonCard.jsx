@@ -23,7 +23,6 @@ const PokemonCard = ({ currentPokemon, pokedexId, setNewPokemon }) => {
               name: result.name,
               experience: result.base_experience,
             });
-            console.log(result);
           },
           (error) => {
             console.log(error);
@@ -32,11 +31,30 @@ const PokemonCard = ({ currentPokemon, pokedexId, setNewPokemon }) => {
     }
   }, [currentPokedexId, pokedexId, setNewPokemon]);
 
-  console.log();
   return (
-    <div className="Pokemon-Card" key={pokedexId}>
-      {currentPokemon && currentPokemon.id}
-    </div>
+    currentPokemon && (
+      <div className="Pokemon-Card" key={pokedexId}>
+        <img
+          className="Pokemon-Image"
+          src={currentPokemon.image}
+          alt="Pokemon"
+        ></img>
+        <div className="Pokemon-Data">
+          <div className="Pokemon-Data-Element">
+            Name: {currentPokemon.name}
+          </div>
+          <div className="Pokemon-Data-Element">
+            Height: {currentPokemon.height}
+          </div>
+          <div className="Pokemon-Data-Element">
+            Weight: {currentPokemon.weight}
+          </div>
+          <div className="Pokemon-Data-Element">
+            Base Experience: {currentPokemon.experience}
+          </div>
+        </div>
+      </div>
+    )
   );
 };
 

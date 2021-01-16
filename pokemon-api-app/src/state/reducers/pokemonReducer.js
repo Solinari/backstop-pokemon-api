@@ -10,7 +10,6 @@ function pokemonReducer(state, action) {
 
       const newEntry = action.payload.pokedexEntry;
 
-      console.log(newEntry);
       if (!newState.pokemon.has(newEntry.id)) {
         newState.pokemon.set(newEntry.id, newEntry);
       }
